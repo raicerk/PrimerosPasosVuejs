@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="AgregaNuevo()">Agrega contacto</button>
+    <button @click="AgregaNuevoFisico()">Agrega fisico</button>
   </div>
 </template>
 
@@ -17,13 +18,20 @@ export default {
     estado: Boolean
   },
   methods: {
-    ...mapMutations(["AgregaContacto"]),
+    ...mapMutations('contactosNamespace', ["AgregaContacto"]),
+    ...mapMutations('fisicosNamespace', ["FisicoAgregaFisico"]),
     AgregaNuevo () {
       this.AgregaContacto({
         nombre: this.nombre,
         apellido: this.apellido,
         edad: this.edad,
         activo: this.estado
+      })
+    },
+    AgregaNuevoFisico () {
+      this.FisicoAgregaFisico({
+        nombre: this.nombre,
+        estado: this.estado
       })
     }
   }

@@ -1,5 +1,8 @@
 <template>
-  <button @click="ActivarEstado(`${nombre}`)">Cambiar estado</button>
+  <div>
+    <button @click="ActivarEstado(`${nombre}`)">Cambiar estado</button>
+    <button @click="FisicoActivarEstado(`${nombre}`)">Cambiar estado fisico</button>
+  </div>
 </template>
 
 <script>
@@ -12,7 +15,9 @@ export default {
     nombre: String
   },
   methods: {
-    ...mapMutations(["ActivarEstado"])
+    //...mapMutations(["ActivarEstado"])
+    ...mapMutations("contactosNamespace", ["ActivarEstado"]),
+    ...mapMutations("fisicosNamespace", ["FisicoActivarEstado"])
   }
 };
 </script>

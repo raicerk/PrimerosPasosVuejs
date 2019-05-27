@@ -7,7 +7,6 @@
         <mutacion :nombre="form.nombre"/>
       </div>
     </div>
-    <hr>
     <div class="field">
       <label class="label">Apellido:{{form.apellido}}</label>
       <input class="input" type="text" placeholder="Text input" v-model="form.apellido">
@@ -25,6 +24,9 @@
       <agrega :nombre="form.nombre" :apellido="form.apellido" :edad="form.edad" :estado="form.estado"/>
     </div>
   </section>
+
+
+  
 </template>
 
 <script>
