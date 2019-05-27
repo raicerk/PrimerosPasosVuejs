@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button @click="ActivarEstado(`${nombre}`)">Cambiar estado</button>
-    <button @click="FisicoActivarEstado(`${nombre}`)">Cambiar estado fisico</button>
+    <button class="btn btn-primary" @click="ActivarEstado(`${nombre}`)">Cambiar estado</button>
+    <button class="btn btn-primary" @click="FisicoActivarEstado(`${nombre}`)">Cambiar estado fisico</button>
   </div>
 </template>
 

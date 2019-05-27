@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button @click="AgregaNuevo()">Agrega contacto</button>
-    <button @click="AgregaNuevoFisico()">Agrega fisico</button>
+    <button class="btn btn-primary" @click="AgregaNuevo()">Agrega contacto</button>
+    <button class="btn btn-primary" @click="AgregaNuevoFisico()">Agrega fisico</button>
   </div>
 </template>
 
